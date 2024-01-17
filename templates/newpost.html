@@ -4,8 +4,15 @@ content %}
 <form action="/users/{{user.id}}/posts/new" method="POST">
   <label for="title">Title</label>
   <input type="text" name="title" />
+  <br />
   <label for="content">Content</label>
   <input type="text" name="content" />
-  <a href="/users/{{user.id}}/">Cancel</a> <input type="submit" value="Add" />
+  <br />
+  {% for tag in tags %}
+  <input type="checkbox" value="{{tag.id}}" name="tags" id="{{tag.id}}" />
+  <label for="{{tag.id}}">{{tag.name}}</label>
+  <br />
+  {% endfor %}
+  <a href="/users/{{user.id}}">Cancel</a> <input type="submit" value="Add" />
 </form>
 {% endblock %}

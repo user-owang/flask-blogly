@@ -4,14 +4,18 @@ content %}
 <form action="/users/new" method="POST">
   <label for="first_name">First Name</label>
   <input type="text" name="first_name" placeholder="Enter a first name" />
+  <br />
   <label for="last_name">Last Name</label>
   <input type="text" name="last_name" placeholder="Enter a last name" />
+  <br />
   <label for="img_url">Image URL</label>
   <input
     type="text"
     name="img_url"
     placeholder="Provide an image of this user"
   />
+  <br />
+  <a href="/users">Cancel</a>
   <input type="submit" />
 </form>
 {% endblock %}
